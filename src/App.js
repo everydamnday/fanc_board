@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./Home/header";
+import Content from "./Home/content";
 
 function App() {
+  const [Login, setLogin] = useState(false);
+  const [inputOpen, setInputOpen] = useState(false);
+  const InputDisplay = () => {
+    setInputOpen((inputOpen) => !inputOpen);
+    console.log("app", inputOpen);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header inputOpen={inputOpen} InputDisplay={InputDisplay} />
+      <Content Login={Login} inputOpen={inputOpen} />
     </div>
   );
 }
