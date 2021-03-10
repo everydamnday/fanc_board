@@ -5,6 +5,9 @@ import styled from "styled-components";
 import ListItem from "../listitem";
 
 const BoardBlock = styled.div`
+  width: 100%;
+  height: 100%;
+
   .board-content__listitem {
     padding: 10px 0px;
     background-color: #ecece9;
@@ -18,11 +21,12 @@ const BarBlock = styled.div`
 const CategoryTag = styled.div`
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 60%;
+
   .board-content__tag {
     margin: 10px 10px;
     padding: 8px;
-    font-size: 15px;
+    font-size: 13px;
     border: 0.5px solid #ecece9;
     border-radius: 15px;
     background-color: #ff6600;

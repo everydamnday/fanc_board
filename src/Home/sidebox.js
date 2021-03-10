@@ -14,16 +14,15 @@ to {
 const SideboxBlock = styled.div`
   margin: 5px;
   width: 30%;
+  min-width: 352px;
   height: 100%;
-  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  position: fixed;
-  right: 145px;
+
   overflow: auto;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 
@@ -81,6 +80,10 @@ const SideboxBlock = styled.div`
       flex-direction: row;
       justify-content: space-between;
       margin: 0px 30px;
+      a {
+        all: unset;
+        text-decoration: none;
+      }
 
       div {
         font-size: 13px;
@@ -89,6 +92,11 @@ const SideboxBlock = styled.div`
         background-color: #ecece9;
         border: 1px solid white;
         border-radius: 15px;
+      }
+
+      div:hover {
+        border: 1px solid orange;
+        cursor: pointer;
       }
     }
   }
@@ -140,21 +148,43 @@ const Sidebox = ({ inputOpen }) => {
         <div className="sidebox-column-first">
           <div className="sidebox-column-first__title">인기 태그</div>
           <div className="sidebox-column-first__tag">
-            <div>아르바이트</div>
-            <div>연말정산</div>
-            <div>진상손님</div>
-            <div>인테리어</div>
+            <div>
+              <a href="#">아르바이트</a>
+            </div>
+            <div>
+              <a href="#">연말정산</a>
+            </div>
+            <div>
+              <a href="#">진상손님</a>
+            </div>
+            <div>
+              <a href="#">인테리어</a>
+            </div>
           </div>
           <div className="sidebox-column-first__tag">
-            <div>발렌타인데이</div>
-            <div>cctv</div>
-            <div>구글플레이카드</div>
+            <div>
+              <a href="#">발렌타인데이</a>
+            </div>
+            <div>
+              <a href="#">cctv</a>
+            </div>
+            <div>
+              <a href="#">구글플레이카드</a>
+            </div>
           </div>
           <div className="sidebox-column-first__tag">
-            <div>발주</div>
-            <div>선입선출</div>
-            <div>시재점검</div>
-            <div>FF</div>
+            <div>
+              <a href="#">발주</a>
+            </div>
+            <div>
+              <a href="#">선입선출</a>
+            </div>
+            <div>
+              <a href="#">시재점검</a>
+            </div>
+            <div>
+              <a href="#">FF</a>
+            </div>
           </div>
         </div>
         {/* <div className="sidebox-column__second">

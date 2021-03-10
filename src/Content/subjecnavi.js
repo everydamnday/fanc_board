@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const SubjectNavigationBlock = styled.div`
   margin-bottom: 10px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,11 +13,11 @@ const SubjectNavigationBlock = styled.div`
   a {
     text-decoration: none;
     color: grey;
-    font-size: 17px;
+    font-size: 14px;
   }
 
   div {
-    margin: 15px 40px;
+    margin: 15px 30px;
   }
 `;
 

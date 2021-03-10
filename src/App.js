@@ -10,10 +10,10 @@ function App() {
     console.log("app", inputOpen);
   };
   return (
-    <div className="App">
+    <>
       <Header inputOpen={inputOpen} InputDisplay={InputDisplay} />
       <Content Login={Login} inputOpen={inputOpen} />
-    </div>
+    </>
   );
 }
 

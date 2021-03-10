@@ -9,9 +9,9 @@ const FooterBlock = styled.div`
     flex-direction: column;
     justify-content: center;
     algin-items: center;
-    background-color: white;
     color: black;
     border-bottom: 1px solid #ecece9;
+
     .footer-title {
       font-size: 30px;
       margin: 10px;
@@ -26,6 +26,7 @@ const FooterBlock = styled.div`
       align-items: center;
       justify-content: center;
       flex-direction: row;
+
       div {
         padding: 3px;
       }

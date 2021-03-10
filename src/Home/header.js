@@ -5,6 +5,7 @@ import styled from "styled-components";
 const HeaderBlock = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 50px;
   top: 0px;
@@ -12,10 +13,13 @@ const HeaderBlock = styled.div`
   background-color: #ecece9;
   opacity: 0.8;
   position: fixed;
+  z-index: 1;
+  margin-left: auto;
+
+  overflow: hidden;
 
   .header-logo {
     width: 25%;
-
     a {
       text-decoration: none;
       div {
@@ -31,7 +35,7 @@ const HeaderBlock = styled.div`
     display: flex;
     flex-direction: row;
     width: 50%;
-    margin: 15px;
+    margin: 15px 0px;
     position: relative;
 
     input {
@@ -63,20 +67,22 @@ const HeaderBlock = styled.div`
   }
 
   .header-menu {
+    width: 20%;
     display: flex;
-    width: 25%;
-    padding: 0px 10px;
     justify-content: space-between;
+    padding: 0px 20px;
+    margin: 0px 10px;
 
     div {
       color: black;
       text-align: center;
       font-weight: 400;
       font-size: 20px;
-      margin: 0px 20px;
-    }
-    div:hover {
-      cursor: pointer;
+      margin: 0px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     a {
@@ -86,7 +92,6 @@ const HeaderBlock = styled.div`
         text-align: center;
         font-weight: 400;
         font-size: 20px;
-        margin: 0px 20px;
       }
     }
   }
@@ -118,7 +123,7 @@ const Header = ({ inputOpen, InputDisplay }) => {
         <Link to="/profile">
           <div>👤</div>
         </Link>
-        <Link to="/message">
+        <Link to="/talk">
           <div>📬</div>
         </Link>
         <Link to="/affiliation">

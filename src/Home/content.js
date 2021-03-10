@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Router } from "react-router-dom";
 import styled from "styled-components";
-import About from "../Header/about";
+import Talk from "../Header/talk";
 import Profile from "../Header/profile";
 import Affiliation from "../Header/affiliation";
 import Category from "../Content/category";
@@ -9,16 +9,18 @@ import CvsBoard from "../Content/category/cvsboard";
 import Sidebox from "./sidebox";
 import SubjectNavigation from "../Content/subjecnavi";
 
+// App > ContentBlock > CategoryBlock(width100%) > SubjectNavigation / CvsBoard / Sidebox
+
 const ContentBlock = styled.div`
-  margin: 0px 150px;
-  padding-top: 50px;
-  overflow: auto;
+  margin-top: 50px;
+  width: 100%;
 `;
 
 const CategoryBlock = styled.div`
   display: flex;
-  width: 60%;
-  flex-direction: column;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
 `;
 
 const Content = ({ Login, inputOpen }) => {
@@ -30,14 +32,16 @@ const Content = ({ Login, inputOpen }) => {
         path="/"
         render={() => (
           <CategoryBlock>
-            <SubjectNavigation />
-            <CvsBoard />
+            <div>
+              <SubjectNavigation />
+              <CvsBoard />
+            </div>
             <Sidebox inputOpen={inputOpen} />
           </CategoryBlock>
         )}
       ></Route>
       <Route path="/profile" render={() => <Profile Login={Login} />} />
-      <Route path="/about" component={About} />
+      <Route path="/talk" component={Talk} />
       <Route path="/affiliation" component={Affiliation} />
       <Route
         path="/category"

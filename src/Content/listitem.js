@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import ListComment from "./listcomment";
 
 const ListItemBlock = styled.div`
   display: flex;
   flex-direction: column;
   background-color: white;
   margin: 0px 10px 5px 10px;
-
-  .listitem-popup {
-    background-color: white;
-    border: 1px solid #ecece9;
-    width: 100%;
-    height: 100%;
-  }
 
   .listitem-title {
     font-size: 25px;
@@ -27,7 +21,7 @@ const ListItemBlock = styled.div`
 
   .listitem-text {
     margin: 15px 10px 30px 10px;
-    font-size: 15px;
+    font-size: 17px;
     color: grey;
   }
 
@@ -68,6 +62,10 @@ const ListItemBlock = styled.div`
         margin-left: 15px;
       }
     }
+
+    .listitem-cmtbox {
+      background-color: white;
+    }
   }
 `;
 
@@ -100,12 +98,11 @@ const ListItem = ({ list, item }) => {
             <div className="listitem-bottom__bookmark">⭐️</div>
           </div>
         </div>
-
         {popup && (
-          <div>
-            <div className="listitem-popup">댓글들</div>
-            <div className="listitem-popup">댓글들</div>
-            <div className="listitem-popup">댓글들</div>
+          <div className="listitem-cmtbox">
+            <ListComment />
+            <ListComment />
+            <ListComment />
           </div>
         )}
       </ListItemBlock>

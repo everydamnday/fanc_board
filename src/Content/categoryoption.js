@@ -7,15 +7,17 @@ const CategorizedBarBlock = styled.div`
   align-items: center;
   justify-content: flex-end;
   flex-direction: row;
-  font-size: 15px;
+  font-size: 13px;
+  width: 40%;
+
   a {
     text-decoration: none;
   }
   .select-brand {
-    width: 150px;
+    width: 170px;
   }
   .select-local {
-    width: 150px;
+    width: 170px;
   }
 `;
 
